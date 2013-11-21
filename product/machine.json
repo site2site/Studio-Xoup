@@ -1,0 +1,86 @@
+{
+  "name": "X-Wall",
+  "description": "Reports Johnny-Five sensor values based on manifest in machine.json file",
+  "server": "server.sitetosite.co",
+  "location": "Studio-X NYC",
+  "publishers":{
+    "sensors": {
+      "": {
+        "params": {
+          "pin": "A0",
+          "freq": 500,
+          "scale": [0,100]
+        },
+        "signal":{
+          "type": "range",
+          "default": 50
+        },
+        "location":{
+          "x": 500,
+          "y": 250
+        }
+      },
+      "bad mic 1":{
+        "params": {
+          "pin": "A1",
+          "freq": 500,
+          "scale": [0,100]
+        },
+        "signal":{
+          "type": "range",
+          "default": 50
+        },
+        "location":{
+          "x": 500,
+          "y": 250
+        }
+      },
+      "bad mic 2": {
+        "params": {
+          "pin": "A2",
+          "freq": 500,
+          "scale": [0,100]
+        },
+        "signal":{
+          "type": "range",
+          "default": 50
+        },
+        "location":{
+          "x": 500,
+          "y": 250
+        }
+      },
+      "bad mic 3": {
+        "params": {
+          "pin": "A3",
+          "freq": 500,
+          "scale": [0,100]
+        },
+        "signal":{
+          "type": "range",
+          "default": 50
+        },
+        "location":{
+          "x": 500,
+          "y": 250
+        }
+      },
+      "temperature": {
+        "params": {
+          "pin": "A4",
+          "freq": 10000,
+          "scale": [0,100]
+        },
+        "signal":{
+          "type": "range",
+          "default": 50
+        },
+        "location":{
+          "x": 500,
+          "y": 250
+        }
+      }
+    }
+  }
+    
+}

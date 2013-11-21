@@ -1,0 +1,21 @@
+{
+    "name": "Studio-xoup-sensor",
+    "description": "Reports Johnny-Five sensor values based on manifest in machine.json file",
+    "version": "0.0.1",
+    "author": {
+        "name": "James Quick <j.n.quick@gmail.com>",
+        "email": "j.n.quick@gmail.com"
+    },
+    "contributors": [
+        { "name": "You Zhou", "email": "<yz2428@columbia.edu>" },
+        { "name": "Troy Conrad Therrien", "email": "<troyth@gmail.com>" }
+    ],
+    "dependencies": {
+        "ws": "*",
+        "colors": "*",
+        "johnny-five": "*"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    }
+}

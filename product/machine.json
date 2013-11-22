@@ -2,7 +2,11 @@
   "name": "X-Wall",
   "description": "Reports Johnny-Five sensor values based on manifest in machine.json file",
   "server": "server.sitetosite.co",
-  "location": "Studio-X NYC",
+  "location": {
+    "city": "Studio-X NYC",
+    "coordinate_x": 400,
+    "coordinate_y": 900
+  },
   "publishers":{
     "sensors": {
       "": {
@@ -29,10 +33,6 @@
         "signal":{
           "type": "range",
           "default": 50
-        },
-        "location":{
-          "x": 500,
-          "y": 250
         }
       },
       "bad mic 2": {

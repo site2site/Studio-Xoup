@@ -1,425 +1,449 @@
-<!DOCTYPE html>
-<html>
+        <!DOCTYPE html>
+        <html>
 
-<head>
-    {block:Description} <meta name="description" content="{MetaDescription}" /> {/block:Description}
-    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+        <head>
+            {block:Description} <meta name="description" content="{MetaDescription}" /> {/block:Description}
+            <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
-    <link rel="shortcut icon" href="{Favicon}"/>
-    <link rel="alternate" type="application/rss+xml" title="{Title} RSS" href="{RSS}"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="http://static.tumblr.com/hznqxps/ivOmgjf8v/normalize.css" /> -->
+            <link rel="shortcut icon" href="{Favicon}"/>
+            <link rel="alternate" type="application/rss+xml" title="{Title} RSS" href="{RSS}"/>
+            <link href="css/main.css" rel="stylesheet" type="text/css">
+            <!-- <link rel="stylesheet" href="http://static.tumblr.com/hznqxps/ivOmgjf8v/normalize.css" /> -->
 
-    <meta name="svg:Background" content="" />
-    <meta name="image:Custom header" content="" />
-    <meta name="color:Background" content="#F9F9F9" />
-    <meta name="color:Accent" content="#FF6600" />
-    <meta name="color:Text" content="#666666" />
-    <meta name="if:Infinite scroll" content="1" />
-    <meta name="if:4 columns" content="0" />
-    <meta name="if:Hide description" content="0" />
-    <meta name="text:Background properties" content="fixed center" />
+            <meta name="svg:Background" content="" />
+            <meta name="image:Custom header" content="" />
+            <meta name="color:Background" content="#F9F9F9" />
+            <meta name="color:Accent" content="#FF6600" />
+            <meta name="color:Text" content="#666666" />
+            <meta name="if:Infinite scroll" content="1" />
+            <meta name="if:4 columns" content="0" />
+            <meta name="if:Hide description" content="0" />
+            <meta name="text:Background properties" content="fixed center" />
 
-    <style>
-    body {
-        margin: 0;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        
-        /*background: {color:Background} url({image:Background}) {text:Background properties};
-        background-repeat: repeat;*/
-        background-image:url(http://www.jstoddart.com/test/site2site/x_bg.svg);
-          background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-        color: {color:Text};
-    }
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-    p a,li a,.credit a,.h2 a { 
-        border-bottom: 1px dotted {color:Text};
-    }
-    a img {
-        border: 0;
-    }
-    blockquote { 
-        margin: 0;
-        padding: 0 0 0 9px;
-        border-left: 1px {color:Text} dotted;
-    }
+            <style>
+            body {
+                margin: 0;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                
+                /*background: {color:Background} url({image:Background}) {text:Background properties};
+                background-repeat: repeat;*/
+                background-image:url(http://www.jstoddart.com/test/site2site/x_bg.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                color: {color:Text};
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            p a,li a,.credit a,.h2 a { 
+                border-bottom: 1px dotted {color:Text};
+            }
+            a img {
+                border: 0;
+            }
+            blockquote { 
+                margin: 0;
+                padding: 0 0 0 9px;
+                border-left: 1px {color:Text} dotted;
+            }
 
-    .main {
-        /*background: none;*/
-        height: 50px;
-        width: 225px;
-        float:left;
-        margin-left: 15px;
-    }
+            .main {
+                /*background: none;*/
+                height: 50px;
+                width: 225px;
+                float:left;
+                margin-left: 15px;
+            }
 
-    #contentWrap {
-        margin: 25px auto;
-        width: {block:If4Columns}1200{/block:If4Columns}{block:IfNot4Columns}900{/block:IfNot4Columns}px;
-        height: 100%;
-        /*background: white;*/
-        background-position:top;
+            #contentWrap {
+                margin: 25px auto;
+                width: {block:If4Columns}1200{/block:If4Columns}{block:IfNot4Columns}900{/block:IfNot4Columns}px;
+                height: 100%;
+                /*background: white;*/
+                background-position:top;
 
-    }
+            }
 
-    .header {
-        width: 100%;
-        text-align: left;
-        padding: 25px{block:PermalinkPage} 0{/block:PermalinkPage};
-        position: fixed;
-        z-index: 10000;
-    }
-    .header img {
-        max-width: 100%;
-    }
-    .header h1 {
-        text-transform: uppercase;
-        font-size: 30px;
-        margin: 0;
-        letter-spacing: 5px;
-        font-weight: normal;
-        color: {color:Accent};
-    }
-    .header p {
-        margin: 5px 0 0 0;
-        font-size: 12px;
-        font-size: 12px;
-        line-height: 175%;
-        padding: 0;
-    }
-    .links {
-        text-align: right;
-    }
-    .links a {
-        background: {color:Background};
-        border-bottom: none;
-        margin: 0 5px;
-        line-height: 35px;
-        padding: 5px 15px;
-        font-size: 11px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        color: {color:Accent};
-    }
-    .posts {
-        position: relative;
-        margin-top: 10%;
-    }
-    .post {
-        float: left;
-        margin: 25px{block:PermalinkPage} 0{/block:PermalinkPage};
-        position: relative;
-        width: {block:IndexPage}250px{/block:IndexPage}{block:PermalinkPage}100%{/block:PermalinkPage};
-    }
-    .media {
-        width: 500px;
-        margin: 0 auto;
-    }
-    .photo {
-        width: 250px;
-        height: auto;
-        /*overflow: hidden;*/
-    }
-    .post .permalink {
-        width: 150px;
-        background: -moz-linear-gradient(left,  rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.75) 100%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.75)), color-stop(50%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0.75)));
-        background: -webkit-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
-        background: -ms-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
-        background: linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#bf000000',GradientType=1 );
-        color: #FFF;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -6px 0 0 -75px;
-        padding: 5px 0;
-        font-size: 10px;
-        text-transform: uppercase;
-        text-align: center;
-        height: 12px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
-        opacity: 0;
-        -webkit-transition: all .25s ease;
-        -moz-transition: all .25s ease;
-        transition: all .25s ease;
-    }
-    .post:hover .permalink {
-        opacity: 1;
-    }
-    .post .player {
-        width: 50px;
-        background: #FFF;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 -25px;
-        font-size: 10px;
-        text-transform: uppercase;
-        text-align: center;
-        height: 50px;
-        -webkit-border-radius: 40px;
-        -moz-border-radius: 40px;
-        border-radius: 40px;
-    }
-    .post .player_overflow {
-        width: 27px;
-        height: 27px;
-        margin: 11px;
-        overflow: hidden;
-    }
-    .post h2 {
-        font-size: 16px;
-        letter-spacing: 2px;
-        line-height: 150%;
-        margin: 0 0 10px 0;
-        text-transform: uppercase;
-        color: {color:Accent};
-    }
-    .post p,.post li {
-        font-size: 12px;
-        line-height: 175%;
-        margin: 5px 0;
-        padding: 0;
-    }
-    .post ul {
-        margin: 5px 25px;
-        padding: 0;
-        list-style: none;
-    }
-    .post img {
-        max-width: 100%;
-        height: auto;
-    }
-    .post .quote {
-        padding: 10px 15px;
-        background: #FFF;
-        position: relative;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
-        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
-        margin-bottom: 20px;
-        font-size: 13px;
-        letter-spacing: normal;
-        font-style: italic;
-        font-weight: normal;
-        text-transform: none;
-        line-height: 160%;
-        color: {color:Accent};
-    }
-    .post .quote .arrow {
-        position: absolute;
-        top: 100%;
-        left: 10px;
-        background: url(http://static.tumblr.com/jw8fmba/NDglv0xrl/arrow.png);
-        width: 35px;
-        height: 15px;
-    }
-    img.main {
-        width: 100%;
-    }
-    .media {
-        width: 500px;
-        margin: 0 auto;
-    }
-    .post ol.notes {
-        padding: 0;
-        margin: 23px 0 !important;
-        list-style-type: none;
-        position: relative;
-    }
-    .post ol.notes a {
-        border: 0 !important;
-    }
-    .post ol.notes li.note {
-        margin: 2px !important;
-        float: left;
-        width: 16px;
-        height: 16px;
-    }
-    .post ol.notes li.more_notes_link_container {
-        width: 100% !important;
-        text-align: center;
-        margin: 2px 0 !important;
-    }
-    .post ol.notes li.note img.avatar {
-        width: 16px;
-        height: 16px;
-        -webkit-border-radius: 16px;
-        -moz-border-radius: 16px;
-        border-radius: 16px;
-    }
-    span.action {
-        min-width: 500px;
-        position: absolute;
-        top: -20px;
-        left: 0;
-        font-size: 12px;
-        opacity: 0;
-        -webkit-transition: all .1s ease;
-        -moz-transition: all .1s ease;
-        transition: all .1s ease;
-        z-index: 999;
-        color: {color:Accent};
-    }
-    .post ol.notes li.note:hover span.action {
-        opacity: 1;
-    }
-    .post ol.notes li.note .answer_content {
-        font-weight: normal;
-    }
-    .post ol.notes li.note blockquote {
-        display: none;
-    }
-    #infscr-loading {
-        text-align: center;
-        z-index: 100;
-        position: fixed;
-        left: 45%;
-        bottom: 50px;
-        z-index: 999;
-    }
-    .seriesDiv { 
-        width: 240px; 
-        height: 735px;
-        margin: 5px;
-        display: block;
-        float: center;
-        border-style:dotted;
-        border-width:1px;
-        border-color: #999;
-        
-    }
+            .header {
+                width: 100%;
+                text-align: left;
+                padding: 25px{block:PermalinkPage} 0{/block:PermalinkPage};
+                position: fixed;
+                z-index: 10000;
+                margin-top: -10%;
+                margin-right: 25px;
+            }
+            .header img {
+                max-width: 100%;
+            }
+            .header h1 {
+                text-transform: uppercase;
+                font-size: 30px;
+                margin: 0;
+                letter-spacing: 5px;
+                font-weight: normal;
+                color: {color:Accent};
+            }
+            .header p {
+                margin: 5px 0 0 0;
+                font-size: 12px;
+                font-size: 12px;
+                line-height: 175%;
+                padding: 0;
+            }
+            .links {
+                text-align: right;
+            }
+            .links a {
+                background: white;
+                border-bottom: none;
+                margin: 0 5px;
+                line-height: 35px;
+                padding: 5px 15px;
+                font-size: 11px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                color: black;
+            }
+            .posts {
+                position: relative;
+                margin-top: 10%;
+            }
+            .post {
+                float: left;
+                margin: 25px{block:PermalinkPage} 0{/block:PermalinkPage};
+                position: relative;
+                width: {block:IndexPage}250px{/block:IndexPage}{block:PermalinkPage}100%{/block:PermalinkPage};
+            }
+            .media {
+                width: 500px;
+                margin: 0 auto;
+            }
+            .photo {
+                width: 250px;
+                height: auto;
+                /*overflow: hidden;*/
+            }
+            .photo img{
+                -webkit-filter: sepia(100%) saturate(200%) hue-rotate(120deg);
+            }
+            .photo img:hover{
+                -webkit-filter: none;
+            }
+            .post .permalink {
+                width: 150px;
+                background: -moz-linear-gradient(left,  rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.75) 100%);
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.75)), color-stop(50%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0.75)));
+                background: -webkit-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
+                background: -o-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
+                background: -ms-linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
+                background: linear-gradient(left,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.85) 50%,rgba(0,0,0,0.75) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#bf000000',GradientType=1 );
+                color: #FFF;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -6px 0 0 -75px;
+                padding: 5px 0;
+                font-size: 10px;
+                text-transform: uppercase;
+                text-align: center;
+                height: 12px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                -webkit-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.25);
+                opacity: 0;
+                -webkit-transition: all .25s ease;
+                -moz-transition: all .25s ease;
+                transition: all .25s ease;
+            }
+            .post:hover .permalink {
+                opacity: 1;
+            }
+            .post .player {
+                width: 50px;
+                background: #FFF;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -25px 0 0 -25px;
+                font-size: 10px;
+                text-transform: uppercase;
+                text-align: center;
+                height: 50px;
+                -webkit-border-radius: 40px;
+                -moz-border-radius: 40px;
+                border-radius: 40px;
+            }
+            .post .player_overflow {
+                width: 27px;
+                height: 27px;
+                margin: 11px;
+                overflow: hidden;
+            }
+            .post h2 {
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 150%;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+                color: {color:Accent};
+            }
+            .post p,.post li {
+                font-size: 12px;
+                line-height: 175%;
+                margin: 5px 0;
+                padding: 0;
+            }
+            .post ul {
+                margin: 5px 25px;
+                padding: 0;
+                list-style: none;
+            }
+            .post img {
+                max-width: 100%;
+                height: auto;
+            }
+            .post .quote {
+                padding: 10px 15px;
+                background: #FFF;
+                position: relative;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+                -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+                margin-bottom: 20px;
+                font-size: 13px;
+                letter-spacing: normal;
+                font-style: italic;
+                font-weight: normal;
+                text-transform: none;
+                line-height: 160%;
+                color: {color:Accent};
+            }
+            .post .quote .arrow {
+                position: absolute;
+                top: 100%;
+                left: 10px;
+                background: url(http://static.tumblr.com/jw8fmba/NDglv0xrl/arrow.png);
+                width: 35px;
+                height: 15px;
+            }
+            img.main {
+                width: 100%;
+            }
+            .media {
+                width: 500px;
+                margin: 0 auto;
+            }
+            .post ol.notes {
+                padding: 0;
+                margin: 23px 0 !important;
+                list-style-type: none;
+                position: relative;
+            }
+            .post ol.notes a {
+                border: 0 !important;
+            }
+            .post ol.notes li.note {
+                margin: 2px !important;
+                float: left;
+                width: 16px;
+                height: 16px;
+            }
+            .post ol.notes li.more_notes_link_container {
+                width: 100% !important;
+                text-align: center;
+                margin: 2px 0 !important;
+            }
+            .post ol.notes li.note img.avatar {
+                width: 16px;
+                height: 16px;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                border-radius: 16px;
+            }
+            span.action {
+                min-width: 500px;
+                position: absolute;
+                top: -20px;
+                left: 0;
+                font-size: 12px;
+                opacity: 0;
+                -webkit-transition: all .1s ease;
+                -moz-transition: all .1s ease;
+                transition: all .1s ease;
+                z-index: 999;
+                color: {color:Accent};
+            }
+            .post ol.notes li.note:hover span.action {
+                opacity: 1;
+            }
+            .post ol.notes li.note .answer_content {
+                font-weight: normal;
+            }
+            .post ol.notes li.note blockquote {
+                display: none;
+            }
+            #infscr-loading {
+                text-align: center;
+                z-index: 100;
+                position: fixed;
+                left: 45%;
+                bottom: 50px;
+                z-index: 999;
+            }
+            .seriesDiv { 
+                width: 240px; 
+                height: 735px;
+                margin: 5px;
+                display: block;
+                float: center;
+                border-style:dotted;
+                border-width:1px;
+                border-color: #999;
+                
+            }
 
-    #footer {
-        background: #000;
-        width: {block:If4Columns}1200{/block:If4Columns}{block:IfNot4Columns}900{/block:IfNot4Columns}px;
-        height: 50px;
-        display: block;
-        margin: 0px;
-        margin-top:auto;
-        position:fixed;
-        bottom: 0;
+            #footer {
+                background: white;
+                background-image:url(http://www.jstoddart.com/test/site2site/x_hr.svg);
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                width: 100%;
+                height: 50px;
+                display: block;
+                margin: 0px;
+                margin-top:auto;
+                position:fixed;
+                bottom: 0%;
 
-    }
+            }
 
-    #footerContent {
-        padding: 5px;
-        font:  "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif ; 
-        height: 30px; /* .push must be the same height as .footer */
-    }
-    </style>
+            #footerContent {
+                padding: 5px;
+                text-align: center;
+                height: 50px;
+            }
+            </style>
 
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/jw8fmba/GR1m4x0xu/discoid.js"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+            <script type="text/javascript" src="http://static.tumblr.com/jw8fmba/GR1m4x0xu/discoid.js"></script>
 
-    <!--  Untitled Themes customize assistant  -->
-    <script type="text/javascript" src="http://static.tumblr.com/jw8fmba/LhHmbnxjx/ut.js?ver=2"></script>
+            <!--  Untitled Themes customize assistant  -->
+            <script type="text/javascript" src="http://static.tumblr.com/jw8fmba/LhHmbnxjx/ut.js?ver=2"></script>
 
-</head>
+        </head>
 
-<body>
-    <div id="contentWrap">
-        <table class="header">
-            <tr>
-                <td width="50%">
-                    <span class="title">
-                        {block:IfCustomHeaderImage}<a href="/"><img src="{image:Custom header}" /></a>{/block:IfCustomHeaderImage}
-                        {block:IfNotCustomHeaderImage}<h1><a href="/">{Title}</a></h1>{/block:IfNotCustomHeaderImage}
-                    </span>
-                    {block:IfNotHideDescription}{block:Description}<p>{Description}</p>{/block:Description}{/block:IfNotHideDescription}
-                </td>
-                <td class="links">
-                    <a href="/archive">{lang:Archive}</a>
-                    {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
-                    {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
-                    {block:Pagination}
-                    <span id="pagination">
-                        {block:PreviousPage}<a id="previous" href="{PreviousPage}">{lang:Previous page}</a>{/block:PreviousPage}
-                        {block:NextPage}<a id="next" href="{NextPage}">{lang:Next page}</a>{/block:NextPage}
-                    </span>
-                    {/block:Pagination}
-                    {block:PreviousPost}<a href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
-                    {block:NextPost}<a href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
-                </td>
-            </tr>
-        </table>
+        <body>
+            <div id="contentWrap">
+                <table class="header">
+                    <tr>
+                        <td width="50%">
+                            <span class="title">
+                                {block:IfCustomHeaderImage}<a href="/"><img src="{image:Custom header}" /></a>{/block:IfCustomHeaderImage}
+                                {block:IfNotCustomHeaderImage}<h1><a href="/">{Title}</a></h1>{/block:IfNotCustomHeaderImage}
+                            </span>
+                            {block:IfNotHideDescription}{block:Description}<p>{Description}</p>{/block:Description}{/block:IfNotHideDescription}
+                        </td>
+                        <td class="links">
+                            <a href="/about">About</a>
+                            <a href="/tagged/guestbook">Guestbook</a>
+                            <a href="/api">API</a>
+                            <a href="/archive">{lang:Archive}</a>
+                            {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
+                            {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+                            {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+                            {block:Pagination}
+                            <span id="pagination">
+                                {block:PreviousPage}<a id="previous" href="{PreviousPage}">{lang:Previous page}</a>{/block:PreviousPage}
+                                {block:NextPage}<a id="next" href="{NextPage}">{lang:Next page}</a>{/block:NextPage}
+                            </span>
+                            {/block:Pagination}
+                            {block:PreviousPost}<a href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
+                            {block:NextPost}<a href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
+                        </td>
+                    </tr>
+                </table>
 
-        <div class="posts">
-            {block:Posts}
-            <!-- {PostType} -->    
-            <div class="post" id="{PostID}">
+                <div class="posts">
+                    {block:Posts}
+                    <!-- {PostType} -->    
+                    <div class="post" id="{PostID}">
 
-                {block:Photo}
-                {LinkOpenTag}
-                <div class="photo">
-                    <img src="{PhotoURL-400}" alt="{PhotoAlt}"/>
+                        {block:Photo}
+                        {LinkOpenTag}
+                        <div class="photo">
+                            <img src="{PhotoURL-400}" alt="{PhotoAlt}"/>
+                        </div>
+                        {LinkCloseTag}
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        {LinkOpenTag}
+                        <img class="main" src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                        {LinkCloseTag}
+                        {block:Caption}{Caption}{/block:Caption}
+                        {/block:PermalinkPage}
+                        {/block:Photo}
+                        <!--Quote Posts / Tweets-->
+                        {block:Quote}
+                        <div class="quote">
+                            "{Quote}"
+                            <div class="arrow"></div>
+                        </div>
+                        {block:Source}<p><em>{Source}</em></p>{/block:Source}
+                        {/block:Quote}
+                        <!--Video Posts / Instagram-->
+                        {block:Video}
+                        {block:IndexPage}
+                        {Video-250}
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        <div class="media">
+                            {Video-500}
+                            {block:Caption}{Caption}{/block:Caption}
+                        </div>
+                        {/block:PermalinkPage}
+                        {/block:Video}
+                        {block:HasTags}
+                        <ul class="tags">
+                            {block:Tags}
+                            <li>
+                                <a href="{TagURL}">{Tag}</a>
+                            </li>
+                            {/block:Tags}
+                        </ul>
+                        {/block:HasTags}
+                    </div>
+                    
+                    {/block:Posts}
                 </div>
-                {LinkCloseTag}
-                {/block:IndexPage}
-                {block:PermalinkPage}
-                {LinkOpenTag}
-                <img class="main" src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
-                {LinkCloseTag}
-                {block:Caption}{Caption}{/block:Caption}
-                {/block:PermalinkPage}
-                {/block:Photo}
-                <!--Quote Posts / Tweets-->
-                {block:Quote}
-                <div class="quote">
-                    "{Quote}"
-                    <div class="arrow"></div>
+                
+                
+            </div>
+            
+            <div id="footer">
+                <div id="footerContent">
+                    Links Go Here / footer bar fixed to the bottom of the browser
                 </div>
-                {block:Source}<p><em>{Source}</em></p>{/block:Source}
-                {/block:Quote}
-                <!--Video Posts / Instagram-->
-                {block:Video}
-                {block:IndexPage}
-                {Video-250}
-                {/block:IndexPage}
-                {block:PermalinkPage}
-                <div class="media">
-                    {Video-500}
-                    {block:Caption}{Caption}{/block:Caption}
-                </div>
-                {/block:PermalinkPage}
-                {/block:Video}
             </div>
 
-            {/block:Posts}
-        </div>
-        
-        
-    </div>
-    
-    <div id="footer">
-        <div id="footerContent">
-            Links Go Here / footer bar fixed to the bottom of the browser
-        </div>
-    </div>
+            {block:IndexPage}
+            <script type="text/javascript">
+            $(function(){var $container = $('.posts').css({ opacity: 0 });$container.imagesLoaded(function(){$container.animate({ opacity: 1 });$container.masonry({itemSelector:'.post',columnWidth: 300});});{block:IfInfiniteScroll}
+                $container.infinitescroll({navSelector:'#pagination',nextSelector:'#pagination a#next',itemSelector: '.post',loading: {img:'http://static.tumblr.com/jw8fmba/D6Pluysct/loading.gif',donetext:''}},function( newElements ) { var $newElems = $( newElements ).css({ opacity: 0 });$newElems.imagesLoaded(function(){$newElems.animate({ opacity: 1 });$container.masonry( 'appended', $newElems, true );});});{/block:IfInfiniteScroll}});
+            </script>
+            {/block:IndexPage}
 
-    {block:IndexPage}
-    <script type="text/javascript">
-    $(function(){var $container = $('.posts').css({ opacity: 0 });$container.imagesLoaded(function(){$container.animate({ opacity: 1 });$container.masonry({itemSelector:'.post',columnWidth: 300});});{block:IfInfiniteScroll}
-        $container.infinitescroll({navSelector:'#pagination',nextSelector:'#pagination a#next',itemSelector: '.post',loading: {img:'http://static.tumblr.com/jw8fmba/D6Pluysct/loading.gif',donetext:''}},function( newElements ) { var $newElems = $( newElements ).css({ opacity: 0 });$newElems.imagesLoaded(function(){$newElems.animate({ opacity: 1 });$container.masonry( 'appended', $newElems, true );});});{/block:IfInfiniteScroll}});
-    </script>
-    {/block:IndexPage}
-
-</body>
-</html>
+        </body>
+        </html>

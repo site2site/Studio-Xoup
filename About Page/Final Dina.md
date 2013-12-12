@@ -13,20 +13,25 @@
 
 ### By utilizing the camera, arduino, and raspberry pi, Studio Xoup can be used to capture, upload, and share whatever studio x users think should be seen.
 
-![Xoup Scenario 01](https://github.com/site2site/Studio-Xoup/blob/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-04.jpg)
+![Xoup Scenario 01](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-04.jpg)
 #### Like exiting things happening in a workspace
 
-![Xoup Scenario 02](https://github.com/site2site/Studio-Xoup/blob/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-05.jpg)
+![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-05.jpg)
 #### Or works in progress straight from the screen
 
-![Xoup Scenario 02](https://github.com/site2site/Studio-Xoup/blob/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-06.jpg)
+![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-06.jpg)
 #### Or a guest that has come for a talk or a visit.
+
+
 
 ![BookGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/Book.gif)
 #### Xoup can promote a book
 
+
+
  ![EventGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/event.gif)
 #### Or an event
 
-![PinwheelGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/model.gif)
-#### Or teach people to make things
+
+
+![PinwheelGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presenta

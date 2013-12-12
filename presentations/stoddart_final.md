@@ -91,14 +91,18 @@ All communication technologies collapsed into mobile hubs that we carry with us.
 ![Cropplr](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_cropplr.png)
 
 #### Xoup also encourages external participation and documentation of the people who populate Studio-X, while automatically processing images to maintain the Studio-X brand.
+![xFace Diagram](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_xFaceDiagram.png)
 ![xFace](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_xFace.png)
 
 #### This content manifests itself in two forms:
 
-#### An stream of data, rendered physical, in each Studio-X locations allows all members to be aware of happenings at other locations. Ideas can be borrowed, exchanged, critiqued and members can decide to contribute to another's line of inquiry.
-![Ticker Tape](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX-tickerTape.png)
+#### (1)
+####A stream of data, rendered physical, in each Studio-X locations allows all members to be aware of happenings at other locations. Ideas can be borrowed, exchanged, critiqued and members can decide to contribute to another's line of inquiry.
+![Ticker Tape](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_tickerTape.png)
 
-#### Xoup shares this content online, using existing social media platforms, compiling the production, the happenings, and the people of all Studio-X into one accessible location.
+####(2)
+####Xoup shares this content online, using existing social media platforms, compiling the production, the happenings, and the people of all Studio-X into one accessible location.
+
 ![Xoup Tumblr](https://raw.github.com/site2site/Studio-Xoup/master/tumblr_theme/screenshots/xoup_01.png)
 
 Content is shared chronologically, and tagged with information regarding the location, event, and ephemeral data.

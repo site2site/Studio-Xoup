@@ -88,10 +88,10 @@ All communication technologies collapsed into mobile hubs that we carry with us.
 ![Xoup Object](https://raw.github.com/site2site/Studio-Xoup/master/images/Device/S2S_device_Elevation.png)
 
 #### Using a simple method of applying physical tags, Xoup collects, crops, tags, and processes the content for sharing. Different tags produce different results, from sharing publicly, to sharing amongst all Studio-X locations, to sharing between two Studio-X locations.
-![Cropplr](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX-cropplr.png)
+![Cropplr](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_cropplr.png)
 
 #### Xoup also encourages external participation and documentation of the people who populate Studio-X, while automatically processing images to maintain the Studio-X brand.
-![xFace](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX-xFace.png)
+![xFace](https://raw.github.com/site2site/Studio-Xoup/master/presentations/stoddart_images/studioX_xFace.png)
 
 #### This content manifests itself in two forms:
 

@@ -12,14 +12,15 @@
 
 ### By utilizing the camera, arduino, and raspberry pi, Studio Xoup can be used to capture, upload, and share whatever studio x users think should be seen.
 
+#### Like exciting things happening in a workspace
 ![Xoup Scenario 01](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-04.jpg)
-#### * Like exciting things happening in a workspace
 
+#### Or works in progress straight from the screen
 ![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-05.jpg)
-#### *Or works in progress straight from the screen
 
+#### Or a guest that has come for a talk or a visit.
 ![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-06.jpg)
-#### *Or a guest that has come for a talk or a visit.
+
 
 
 

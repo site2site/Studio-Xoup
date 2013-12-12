@@ -41,5 +41,7 @@
 ![PinwheelGIF] (http://i.imgur.com/e64vBkk.gif)
 #### Or teach people how to make things
 
+### Xoup makes it easy to share media with the public, within the studio, or within a network of studios
+
 
 ![Website] (https://raw.github.com/site2site/Studio-Xoup/master/tumblr_theme/screenshots/xoup_01.png)

@@ -1,4 +1,3 @@
-
 ## An Architectural API
 
 ### A component deployed in multiple architectural scenarios that weaves a common thread between spaces of differing program, user, and location, providing a platform for interaction and cross pollination.      
@@ -14,13 +13,13 @@
 ### By utilizing the camera, arduino, and raspberry pi, Studio Xoup can be used to capture, upload, and share whatever studio x users think should be seen.
 
 ![Xoup Scenario 01](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-04.jpg)
-#### Like exiting things happening in a workspace
+#### * Like exciting things happening in a workspace
 
 ![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-05.jpg)
-#### Or works in progress straight from the screen
+#### *Or works in progress straight from the screen
 
 ![Xoup Scenario 02](https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/xoup%20scenario-06.jpg)
-#### Or a guest that has come for a talk or a visit.
+#### *Or a guest that has come for a talk or a visit.
 
 
 

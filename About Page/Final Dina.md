@@ -24,6 +24,8 @@
 
 
 
+
+
 ![BookGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/Book.gif)
 #### Xoup can promote a book
 
@@ -34,4 +36,5 @@
 
 
 
-![PinwheelGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presenta
+![PinwheelGIF] (https://raw.github.com/site2site/Studio-Xoup/master/About%20Page/Final%20Presentation%20imgs/model.gif)
+#### Or teach people how to make things
